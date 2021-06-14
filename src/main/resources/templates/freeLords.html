@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Free Lords</title>
+</head>
+<body>
+<h2>Повелители, у которых нет планет</h2>
+<div th:each="lord:${lords}">
+<tr th:text="${lord.name}"/>
+</div>
+<a href="#" onclick="history.back();return false;">Вернуться назад</a>
+</body>
+</html>

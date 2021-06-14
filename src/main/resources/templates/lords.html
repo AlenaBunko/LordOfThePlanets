@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lords</title>
+</head>
+<body>
+<h3>Список всех повелителей</h3>
+<table>
+<tr lords.size()></tr>
+</table>
+<div th:insert="~{addLord :: addLordFragment}"></div>
+<p>
+<div th:insert="~{lordTable::tableFragment}"></div>
+</p>
+<br>
+<button id="showDialogBt" >Добавить Повелителя</button>
+<br><a class="btn btn-freeLord" th:href="@{'/freeLords'}">Повелители, у которых нет планет</a>
+<br><a class="btn btn-top" th:href="@{'/top10'}">ТОП 10 самых молодых Повелителей</a>
+<script>
+    (function () {
+        let showBt = document.getElementById('showDialogBt');
+        showBt.addEventListener('click', function () {
+            let addLordDialog = document.getElementById('addLordDialog');
+            addLordDialog.showModal();
+        });
+    })();
+
+</script>
+</body>
+</html>

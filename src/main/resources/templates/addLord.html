@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Lord</title>
+</head>
+<body>
+
+<div th:fragment="addLordFragment">
+    <dialog id="addLordDialog" >
+        <form id="addLordForm"  onsubmit="addLordSubmit.submit()">
+            <section>
+                <p>
+                    <label for="name">Имя: </label>
+                    <input id="name" type="text" name="name"/>
+                </p>
+                <p>
+                    <label>Возраст:</label>
+                    <input id="age" type="number" name="age"/>
+                </p>
+            </section>
+            <menu>
+                <button type="submit">Сохранить</button>
+                <button type="close" id="cancel" onclick="addLordSubmit.cancelEvent()">Отмена</button>
+            </menu>
+        </form>
+    </dialog>
+    <script type="text/javascript" th:src="@{/addLordDialog.js}"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+<h3>Главная страница</h3>
+<form action="/page" method="get">
+    <a th:href="@{/lords}">Lords</a>
+
+    <a th:href="@{/allPlanets}">Planets</a>
+</form>
+</body>
+</html>
